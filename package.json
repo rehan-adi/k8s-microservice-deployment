@@ -1,0 +1,40 @@
+{
+  "name": "k8s-microservice-deployment",
+  "version": "1.0.0",
+  "description": "k8s microservice deployment for fun haha 😁",
+  "private": true,
+  "scripts": {
+    "db:studio": "bun run --filter @k8s-microservice-deployment/db studio",
+    "api:start": "bun run --filter @k8s-microservice-deployment/api-service start",
+    "worker:start": "bun run --filter @k8s-microservice-deployment/worker-service start"
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "author": {
+    "name": "Rehan",
+    "email": "official.rehan.me@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bun",
+    "sse",
+    "hono",
+    "redis",
+    "resend",
+    "typescript",
+    "postgresql",
+    "microservices"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "packageManager": "bun@1.2.17",
+  "engines": {
+    "bun": ">=1.2.17"
+  }
+}

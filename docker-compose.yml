@@ -1,0 +1,16 @@
+services:
+  api-service:
+    image: rehanadi/api-service:latest
+    container_name: api-service
+    env_file:
+      - ./services/api-service/.env
+    ports:
+      - "3000:3000"
+    depends_on: []
+
+  worker:
+    image: rehanadi/worker-service:latest
+    container_name: worker-service
+    env_file:
+      - ./services/worker-service/.env
+    depends_on: []

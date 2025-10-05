@@ -1,0 +1,23 @@
+{
+  "name": "@k8s-microservice-deployment/worker-service",
+  "version": "1.0.0",
+  "description": "worker-service for k8s-microservice-deployment",
+  "private": true,
+  "type": "module",
+  "module": "src/main.ts",
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "dev": "bun run --watch src/main.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@k8s-microservice-deployment/db": "workspace:*",
+    "ioredis": "^5.8.0",
+    "resend": "^6.1.0"
+  }
+}

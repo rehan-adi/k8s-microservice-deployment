@@ -1,0 +1,26 @@
+{
+  "name": "@k8s-microservice-deployment/db",
+  "version": "1.0.0",
+  "description": "db package for k8s-microservice-deployment",
+  "private": true,
+  "type": "module",
+  "module": "src/index.ts",
+  "scripts": {
+    "studio": "bunx prisma studio",
+    "generate": "bunx prisma generate",
+    "migrate": "bunx prisma migrate dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prisma": "^6.16.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.2"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
